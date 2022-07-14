@@ -1,0 +1,63 @@
+Problema 4
+Selecionando Transações
+Tempo limite: 0,5s (C/C++), 1,5s (Python 2/3), 2,0s(Java)
+
+A inovadora tecnologia blockchain é utilizada por diversos criptoativos existentes, permitindo que
+transações entre os usuários da rede possam ser realizadas e processadas de forma descentralizada,
+ou seja, sem a necessidade da participação de alguma terceira parte como uma instituição financeira
+para executar as transações e proporcionar um certo nível de segurança e confiança para as partes
+envolvidas. Cada transação desses criptoativos é simplesmente uma operação de transferência de
+valor de um endereço de uma carteira digital de quem faz o envio do valor para um endereço de
+outra carteira digital de destino que recebe o valor enviado.
+Para que as transações sejam processadas de forma distribuída, é importante que existam servidores
+(computadores ou nós conectados à rede) para confirmar que as transações realizadas na rede são
+válidas, ou seja, verificar a existência de fundos disponíveis no endereço de origem. Em geral, para
+que uma transação de um dado criptoativo seja processada, existe uma taxa cujo valor em unidades
+do criptoativo pode ser definido pelo usuário que iniciou a transação. Quanto maior o valor
+oferecido, maior é a probabilidade da transação ser confirmada em curto espaço de tempo. Porém,
+caso o valor seja muito baixo, a transação corre o risco de não ser processada e, portanto, não ficar
+registrada no blockchain. Nesse caso, o destinatário da transação não recebe o valor enviado, pois o
+saldo em um endereço é dado pelo balanço entre todas as transações envolvendo esse endereço
+registradas no blockchain.
+Um blockchain é formado por uma sequência de blocos que são adicionados pelos nós da rede de
+forma cronológica, sendo que cada bloco possui um conjunto de transações realizadas em um dado
+período e que já foram confirmados por servidores da rede. Como forma de incentivar que
+computadores sejam alocados para o processamento dessas transações e armazenamento e
+atualização do blockchain, o projeto de uma rede blockchain pode determinar que servidores
+compitam entre si para validarem transações disponíveis em um repositório de transações a espera
+por confirmação, chamado de mempool. Quanto maior o número de nós na rede, maior o nível de
+proteção que as transações realizadas e registradas no blockchain possuem, assim também como
+maior a capacidade de processamento das transações realizadas.
+Para criar e inserir um novo bloco em uma nova rede blockchain chamada CodeBlock, um nó dessa
+rede deve selecionar do mempool um conjunto de transações a serem verificadas e que são
+candidatas para formarem um novo bloco no blockchain. O valor de uma transação é definido em
+termos de unidades de CBL, a moeda definida para a rede CodeBlock. Um bloco possui como
+restrição um tamanho máximo C em bytes que ele pode ter para ser registrado no blockchain.
+Considerando que as transações possuem tamanho e taxa específicos para cada transação, o
+algoritmo a ser executado deve otimizar a seleção de transações de forma a resultar no maior retorno
+possível caso o seu bloco criado venha a ser registrado no blockchain. Desenvolva um programa que
+resolva o problema proposto na seleção ótima de transações a serem verificadas.
+Entrada
+A primeira linha de um caso de teste contém os inteiros N (1 ≤ N ≤ 100) e C (1 ≤ C ≤ 10.000),
+representando o número de transações existentes no mempool e a capacidade em bytes de um bloco,
+respectivamente. Cada uma das N próximas linhas apresenta a taxa ri e o tamanho si em bytes da
+i-ésima transação (1 ≤ i ≤ N).
+Saída
+Seu programa deve imprimir uma linha contendo a soma das taxas em CBL a serem obtidas caso o
+bloco seja inserido no blockchain.
+
+Exemplo de Entrada
+4 5
+4 2
+5 2
+2 1
+8 3
+
+Exemplo de Saída
+13
+Exemplo de Entrada
+2 20
+5 9
+4 10
+Exemplo de Saída
+9
