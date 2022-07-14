@@ -1,0 +1,74 @@
+Problema 3
+Caça aos peões
+
+Tempo limite: 0,5s (C/C++), 1,5s(Python 2/3), 2,0s(Java)
+
+O jogo “Caça aos peões” é variação do xadrez para um jogador. Ele utiliza um tabuleiro
+similar ao de xadrez, porém dividido em 8x8 posições. Como no xadrez, cada posição pode
+conter apenas uma peça por vez. No jogo existe uma certa quantidade de peões e um único
+cavalo, que é a única peça sob o comando do jogador. O objetivo deste jogo é capturar
+todos os peões antes deles alcançarem a última linha e se tornarem reis.
+
+O cavalo se move em “L”, pois ele sempre move duas posições em uma direção e uma em
+uma direção perpendicular. A figura acima ilustra os possíveis movimentos do cavalo,
+onde “H” indica a posição atual do cavalo e cada ponto preto indica uma possível posição
+final.
+
+01 02 03 04 05 06 07 08
+09 10 11 12 13 14 15 16
+17 18 19 20 21 22 23 24
+25 26 27 28 29 30 31 32 Da posição 22, o cavalo pode se mover para as posições 05,
+33 34 35 36 37 38 39 40 07, 12, 16, 28, 32, 37 ou 39. Da posição 57, o cavalo pode se
+41 42 43 44 45 46 47 48 mover para as posições 42 ou 51.
+49 50 51 52 53 54 55 56
+57 58 59 60 61 62 63 64
+
+O tabuleiro com as células numeradas
+
+Os movimentos dos peões são um pouco diferentes do Xadrez, uma vez que o peão só
+pode se mover um quadrado para frente e todos os outros peões se movem ao mesmo
+tempo. Eles nunca se movem em diagonal. As casas do tabuleiro são numeradas de 1 a 64,
+como mostrado acima. Os peões se movem na direção vertical de cima para baixo, de modo
+que os quadrados numerados 57-64 são os objetivos dos peões.
+Cada rodada do jogo é composta por um movimento do cavalo seguido por um
+movimento simultâneo de todos os peões ainda não capturados.
+A fim de capturar um peão, o jogador deve mover o cavalo para o quadrado onde está o
+peão. O peão capturado deixa o tabuleiro e somente os peões restantes avançam para a
+próxima rodada. Para vencer o jogo, o jogador deve capturar todos os peões. Se um peão
+conseguir chegar à última linha, torna-se um rei. Com isso o cavalo tem apenas mais um
+movimento para capturá-lo. Se isso não acontecer, o rei se move e isso significa que o jogo
+acaba e o jogador perde. Além disso, se o cavalo se mover para um quadrado que vai ser
+ocupado por um peão, no próximo movimento dos peões o cavalo é capturado pelo peão e
+
+o jogador perde.
+Sua tarefa é escrever um programa que analise um tabuleiro de "Caça aos peões" e
+responda se existe uma sequência de movimentos para o cavalo vencer. Se for possível, o
+programa deve determinar o número mínimo de movimentos necessários para o cavalo
+capturar todos os peões. O algoritmo implementado deve ser projetado utilizando alguma
+técnica de projeto de algoritmos estudado em aula.
+
+Entrada
+Cada caso de teste começa com um inteiro P que representa o número de peões (0 ≤ P ≤ 8),
+seguido por P inteiros (1 ≤ A1, A2, ..., Ap ≤ 64) que descrevem a posição inicial de cada
+peão seguido de um inteiro H (1 ≤ H ≤ 64) que representa a posição inicial do cavalo.
+Saída
+Seu programa deve imprimir uma linha contendo a resposta para o problema. Se houver
+uma sequência de movimentos para o cavalo que capture todos os peões (e sem que o
+cavalo seja capturado por um peão), o programa deve imprimir o comprimento da menor
+sequência de movimentos possível. Caso contrário, seu programa deve imprimir a palavra
+'impossible'.
+
+Exemplo de Entrada
+1 1 11
+Exemplo de Saída
+1
+
+Exemplo de Entrada
+1 60 1
+Exemplo de Saída
+impossible
+
+Exemplo de Entrada
+2 33 60 54
+Exemplo de Saída
+3
