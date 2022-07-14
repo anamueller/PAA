@@ -1,0 +1,51 @@
+
+Problema 1
+Adoção de tecnologia
+Tempo Limite: 1,0 s (C/C++)
+A revolução digital permitiu que novos produtos tecnológicos como computadores pessoais, aparelhos de
+telefonia móvel e a internet alcançassem altos níveis de difusão e adoção nas últimas décadas. Assim, novos
+produtos tecnológicos podem explorar esses fatos de forma que uma parte significativa do valor econômico
+gerado pela concepção, desenvolvimento e adoção dessas novas soluções tecnológicas possa ser extraído a partir
+da sua base de usuários, que ao se tornarem conectados por meio da internet, formam uma rede. Ou seja, o valor
+de um produto ou uma empresa se torna proporcional ao tamanho alcançado pela sua rede de usuários.
+Novas descobertas científicas levam eventualmente ao desenvolvimento de novas tecnologias, que se
+empregadas de forma bem sucedida, podem vir a substituir um conjunto de tecnologias que se tornaram obsoletas
+com as inovações mais recentes. Porém, quando uma certa tecnologia é amplamente difundida na sociedade, o
+tempo de adoção de uma nova tecnologia que a substitua pode durar anos ou décadas.
+Considerando o período de tempo que a adoção de novas tecnologias pode levar, empreendedores que
+visam o desenvolvimento de produtos inovadores e, muitas vezes disruptivos, devem considerar possíveis ritmos
+de adoção de seus produtos para serem incluídos em seu planejamento estratégico.
+Para estimar o ritmo de crescimento da sua base de usuários, um jovem empreendedor precisa de uma
+ferramenta computacional que o ajude a testar várias hipóteses baseadas em modelos de crescimento da rede. Um
+possível modelo mais simples e conservador poderia se basear no histórico recente de adoção do produto para
+estimar o nível de adoção dos próximos dias. Nesse modelo, o número de novos usuários em um dado dia é
+sempre igual ao teto da média de novos usuários nos últimos 30 dias.
+Você deve escrever um programa que implemente um algoritmo que determine, baseado no modelo
+descrito anteriormente, em quantos dias seria possível alcançar um dado número de usuários na rede do novo
+produto a ser lançado. Considerando que o programa será utilizado para testar vários cenários, é esperado que o
+seu programa seja eficiente em retornar a estimativa rapidamente.
+Entrada
+A primeira linha da entrada contém apenas dois inteiros N e M (0 < N, M ≤ 50.000.000), que definem a
+quantidade inicial de usuários e a quantidade de usuários a ser alcançada, respectivamente. Na segunda linha, 30
+números inteiros Di (1 ≤ Di ≤ 100.000) são apresentados em ordem cronológica, representando as quantidades de
+novos usuários registrados nos últimos 30 dias, do registro mais antigo (D1) ao mais recente (D30). Os números da
+entrada são separados por um espaço em branco entre cada par de números.
+Saída
+O seu programa deve imprimir uma linha contendo o resultado do cálculo a ser realizado.
+Exemplos
+Entrada
+50 76
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+Saída
+6
+Entrada
+126 135
+5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 4
+Saída
+2
+Entrada
+150 10000
+20 23 24 18 13 25 10 21 35 9 12 15 13 25 22 23 15 20 10 11 12 15 19 21
+18 15 22 29 14 31
+Saída
+494
